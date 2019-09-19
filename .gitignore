@@ -28,4 +28,12 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+node_modules/*
+.bowerrc
+gulpfile.js
+package.json
+package-lock.json
+settings.json
+.eslintrc.js
+
 # End of https://www.gitignore.io/api/windows
