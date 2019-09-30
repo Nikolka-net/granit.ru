@@ -1,0 +1,110 @@
+.header
+    display: flex
+    flex-direction: column
+    background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //align-items: center
+    background-color: #a38a19
+    &_top
+        margin-top: 15px
+
+.logo
+    display: flex
+    background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        background: #a01b1b
+        margin-left: 10px
+
+    &__link
+        align-self: center
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        color: $color-black
+        transform: translateY(3px)
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        color: $color-gray
+        transform: translateY(7px)
+
+.header-phone
+    background-color: #18abcf
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        color: $color-black
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        color: $color-gray
+        transform: translateY(5px)
+    &__button
+        display: block
+        font-family: $font_medium
+        font-size: 12px
+        color: $color-black
+        border: 2px solid $color-black
+        padding: 12px
+        margin-left: 30px
+        cursor: pointer
+
+.header-menu
+    background-color: #ffcc00
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    min-height: 60px
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding-left: 0
+
+    &__item
+        list-style: none
+    &__link
+        text-decoration: none
+        color: #000
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -43px
+
+.hero
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+    &-content
+        background: #c5591b
+    &-more
+        background: #12a331
+
+    &_top
+        margin-top: 170px

@@ -35,5 +35,7 @@ package.json
 package-lock.json
 settings.json
 .eslintrc.js
+.jshintrc
+old/*
 
 # End of https://www.gitignore.io/api/windows
