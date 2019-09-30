@@ -418,7 +418,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #e9d3d3;
 }
 
 .header-logo {
@@ -428,7 +427,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #a38a19;
 }
 
 .header-logo_top {
@@ -439,7 +437,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #43ac29;
 }
 
 .logo-content {
@@ -453,7 +450,6 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background: #a01b1b;
   margin-left: 10px;
 }
 
@@ -482,7 +478,6 @@ body {
 }
 
 .header-phone {
-  background-color: #18abcf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -528,10 +523,12 @@ body {
   padding: 12px;
   margin-left: 30px;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .header-menu {
   background-color: #ffcc00;
+  z-index: 99;
 }
 
 .header-menu_top {
@@ -547,11 +544,11 @@ body {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  min-height: 60px;
   font-family: Gotham Pro Medium;
   font-size: 14px;
   color: #000;
   padding-left: 0;
+  padding: 8px 0 8px 0;
 }
 
 .menu-list__item {
@@ -571,7 +568,7 @@ body {
 }
 
 .header-background_top {
-  margin-top: -43px;
+  margin-top: -29px;
 }
 
 .hero {
@@ -588,14 +585,61 @@ body {
 }
 
 .hero-content {
-  background: #c5591b;
+  color: #fff;
+}
+
+.hero-content__title {
+  font-family: Gotham Pro Bold;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.hero-content__text {
+  font-family: Gotham Pro Light;
+  font-size: 14px;
+  margin-top: 32px;
+  line-height: 22px;
 }
 
 .hero-more {
-  background: #12a331;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-more__button {
+  display: block;
+  font-family: Gotham Pro Medium;
+  font-size: 12px;
+  color: #000;
+  width: 200px;
+  height: 50px;
+  background-color: #ffcc00;
+  cursor: pointer;
+  border: 0;
+}
+
+.hero-more__text {
+  color: #fff;
+  font-size: 12px;
+  font-family: Gotham Pro Light;
+  margin-left: 30px;
+}
+
+.hero-more__link {
+  color: #fff;
+  font-family: Gotham Pro Medium;
+  margin-left: 10px;
+}
+
+.hero-more_top {
+  margin-top: 45px;
 }
 
 .hero_top {
-  margin-top: 170px;
+  margin-top: 130px;
 }
 /*# sourceMappingURL=style.css.map */

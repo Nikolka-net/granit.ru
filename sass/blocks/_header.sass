@@ -1,24 +1,23 @@
 .header
     display: flex
     flex-direction: column
-    background-color: #e9d3d3
+    //background-color: #e9d3d3
 
 .header-logo
     display: flex
     justify-content: space-between
-    //align-items: center
-    background-color: #a38a19
+    //background-color: #a38a19
     &_top
         margin-top: 15px
 
 .logo
     display: flex
-    background-color: #43ac29
+    //background-color: #43ac29
     &-content
         display: flex
         flex-direction: column
         align-items: flex-start
-        background: #a01b1b
+        //background: #a01b1b
         margin-left: 10px
 
     &__link
@@ -39,7 +38,7 @@
         transform: translateY(7px)
 
 .header-phone
-    background-color: #18abcf
+    //background-color: #18abcf
     display: flex
     align-items: center
 
@@ -66,9 +65,11 @@
         padding: 12px
         margin-left: 30px
         cursor: pointer
+        background-color: #fff
 
 .header-menu
     background-color: #ffcc00
+    z-index: 99
     &_top
         margin-top: 30px
 
@@ -76,11 +77,11 @@
     display: flex
     align-items: center
     justify-content: space-around
-    min-height: 60px
     font-family: $font_medium
     font-size: 14px
     color: #000
     padding-left: 0
+    padding: 8px 0 8px 0
 
     &__item
         list-style: none
@@ -94,7 +95,7 @@
     min-height: 550px
     background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
     &_top
-        margin-top: -43px
+        margin-top: -29px
 
 .hero
     display: flex
@@ -102,9 +103,44 @@
     align-items: flex-start
 
     &-content
-        background: #c5591b
+        color: #fff
+        //background: #c5591b
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+
     &-more
-        background: #12a331
+        //background: #12a331
+        display: flex
+        align-items: center
+        &__button
+            display: block
+            font-family: $font_medium
+            font-size: 12px
+            color: #000
+            width: 200px
+            height: 50px
+            background-color: #ffcc00
+            cursor: pointer
+            border: 0
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+        &_top
+            margin-top: 45px
 
     &_top
-        margin-top: 170px
+        margin-top: 130px
