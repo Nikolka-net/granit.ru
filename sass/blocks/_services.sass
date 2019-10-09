@@ -1,20 +1,19 @@
-.plus
+.services
     background-color: #f4f4f4
     display: flex
     &-cards
         display: flex
+        align-items: center
         justify-content: space-between
         flex-wrap: wrap
-        //background-color: #c57a18
     &-card
-        display: flex
-        align-items: center
-        flex-direction: column
-        text-align: center
-        flex-basis: 32%
-        //background-color: #1543a8
-        flex-wrap: wrap
         border: 2px solid #fff
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        flex-wrap: wrap
+        flex-basis: 32%
         &__margin
             margin-bottom: 80px
         &:hover
@@ -22,27 +21,22 @@
             transition-timing-function: ease
             transition-duration: 0.3s
         &__img
-            margin-top: 40px
+            margin-top: 50px
+            padding: 0 10px
         &__title
             margin-top: 40px
-        &__text
-            font-family: $font_light
-            font-size: 12px
-            color: $color-black
-            line-height: 18px
-            max-width: 250px
-            width: 100%
-            margin: 0 0 40px 0
+            border-bottom: 1px solid #d7d7d7
+            margin-bottom: 40px
 
 /* media */
 @media ( max-width: 768px )
-    .plus-cards
+    .services-cards
         justify-content: center
-    .plus-card
+    .services-card
         flex-basis: 45%
         &__margin
             margin: 10px 10px
 
 @media ( max-width: 476px )
-    .plus-card
+    .services-card
         flex-basis: 60%
