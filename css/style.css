@@ -380,8 +380,8 @@ template {
   font-style: normal;
 }
 
-/*импорт цветов*/
-/*импорт интерфейса*/
+/* цвета */
+/* интерфейс */
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1168,13 +1168,145 @@ img {
 }
 
 /* contacts */
-/*импорт сетка*/
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url("../images/contacts/contacts-bg.png");
+  background-attachment: scroll;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.contact {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  max-width: 385px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.contact__title {
+  font-family: Gotham Pro Bold;
+  font-size: 20px;
+  color: #292929;
+  text-transform: uppercase;
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+
+.contact-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact-wrap {
+  padding: 27px;
+}
+
+.contact-phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.contact-phone__img {
+  margin-right: 16px;
+}
+
+.contact-phone__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-phone__link {
+  font-family: Gotham Pro Medium;
+  font-size: 14px;
+  color: #292929;
+  line-height: 30px;
+  text-decoration: none;
+}
+
+.contact-phone__margin {
+  margin-bottom: 14px;
+}
+
+.contact-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.contact-address__text {
+  max-width: 220px;
+  width: 100%;
+  font-size: 14px;
+  color: #292929;
+}
+
+.contact-address__img {
+  margin-right: 16px;
+}
+
+.contact-address__margin {
+  margin-bottom: 22px;
+}
+
+.contact-mail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.contact-mail__link {
+  font-size: 14px;
+  color: #292929;
+  text-decoration: none;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+.contact-mail__img {
+  margin-right: 16px;
+}
+
+.contact-mail__margin {
+  margin-bottom: 40px;
+}
+
+/* сетка */
 .container {
   max-width: 940px;
   margin: 0 auto;
   width: 100%;
   z-index: 10;
-  padding: 0 15px;
 }
 
 .container__title {
@@ -1197,5 +1329,12 @@ h3 {
   font-family: Gotham Pro Medium;
   font-size: 15px;
   color: #292929;
+}
+
+/* media */
+@media (max-width: 991px) {
+  .container {
+    padding: 0 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

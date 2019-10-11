@@ -1,0 +1,68 @@
+.contacts
+    display: flex
+    background-image: url('../images/contacts/contacts-bg.png')
+    background-attachment: scroll
+    background-position: top
+    background-repeat: no-repeat
+
+.contact
+    background-color: #fff
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    width: 100%
+    max-width: 385px
+    margin-top: 80px
+    margin-bottom: 80px
+    &__title
+        font-family: $font_bold
+        font-size: 20px
+        color: $color-black
+        text-transform: uppercase
+        margin-top: 53px
+        margin-bottom: 38px
+    &-flex
+        display: flex
+        justify-content: flex-end
+    &-wrap
+        padding-left: : 60px
+    &-phone
+        display: flex
+        align-items: baseline
+        &__img
+            margin-right: 16px
+        &__content
+            display: flex
+            flex-direction: column
+        &__link
+            font-family: $font_medium
+            font-size: 14px
+            color: $color-black
+            line-height: 30px
+            text-decoration: none
+        &__margin
+            margin-bottom: 14px
+    &-address
+        display: flex
+        align-items: baseline
+        &__text
+            max-width: 220px
+            width: 100%
+            font-size: 14px
+            color: $color-black
+        &__img
+            margin-right: 16px
+        &__margin
+            margin-bottom: 22px
+    &-mail
+        display: flex
+        align-items: baseline
+        &__link
+            font-size: 14px
+            color: $color-black
+            text-decoration: none
+            border-bottom: 1px solid #d7d7d7
+        &__img
+            margin-right: 16px
+        &__margin
+            margin-bottom: 70px
