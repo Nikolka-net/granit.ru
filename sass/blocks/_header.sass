@@ -9,6 +9,8 @@
     //background-color: #a38a19
     &_top
         margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
 
 .logo
     display: flex
@@ -19,23 +21,28 @@
         align-items: flex-start
         //background: #a01b1b
         margin-left: 10px
+       
 
     &__link
-        align-self: center
+        align-self: baseline
 
     &__title
         margin: 0
         font-family: $font_bold
         font-size: 20px
         text-transform: uppercase
-        color: $color-black
         transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
 
     &__text
         font-family: $font_light
         font-size: 11px
-        color: $color-gray
         transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
 
 .header-phone
     display: flex
@@ -48,12 +55,10 @@
     &__link
         font-family: $font_bold
         font-size: 18px
-        color: $color-black
         text-decoration: none
     &__text
         font-family: $font_pro
         font-size: 11px
-        color: $color-gray
         transform: translateY(4px)
     &__button
         display: flex
@@ -61,11 +66,18 @@
         padding: 12px 23px
         font-family: $font_medium
         font-size: 12px
-        color: #0d0d0d
         cursor: pointer
-        border: 2px solid $color-black
         margin-left: 30px
-        background-color: #fff
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
         &:focus
             outline: none
         &:hover
@@ -157,7 +169,7 @@
     &_top
         margin-top: 130px
 
-/* media */
+
 @media ( max-width: 768px )
     .header
         &-logo
