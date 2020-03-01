@@ -790,14 +790,23 @@ img {
   .phone_top {
     margin-top: 0;
   }
-  .phone__button {
+  .phone__button_showheader {
     margin: 0 0 0 12px;
+  }
+  .phone__button_showfooter {
+    margin-top: 0;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
   }
   .header-logo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .header-logo_bottom {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   .header-phone {
     -webkit-box-orient: horizontal;
@@ -1355,6 +1364,15 @@ img {
 
 .footer-date_top {
   margin-top: 40px;
+}
+
+@media (max-width: 476px) {
+  .footer_top {
+    margin-top: -13px;
+  }
+  .phonefooter_top {
+    margin-top: 15px;
+  }
 }
 
 /** grid **/

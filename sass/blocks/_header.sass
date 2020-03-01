@@ -209,11 +209,17 @@
         &_top
             margin-top: 0
         &__button
-            margin: 0 0 0 12px
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
 
     .header
         &-logo
             flex-direction: column
+            &_bottom
+                transform: translateY(10px)
 
         &-phone
             flex-direction: row
