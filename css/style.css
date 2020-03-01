@@ -1033,9 +1033,8 @@ img {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -1045,6 +1044,17 @@ img {
       flex-basis: 24%;
   text-align: center;
   border: 2px solid #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1px;
+  overflow: hidden;
 }
 
 .popular-card__margin {
@@ -1117,6 +1127,36 @@ img {
   font-family: Gotham Pro Medium;
   font-size: 10px;
   text-transform: uppercase;
+}
+
+@media (max-width: 771px) {
+  .popular-card__margin {
+    margin-bottom: 20px;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
+  }
+}
+
+@media (max-width: 576px) {
+  .popular-card {
+    -ms-flex-preferred-size: 36%;
+        flex-basis: 36%;
+    margin: 10px 20px;
+  }
+}
+
+@media (max-width: 476px) {
+  .popular-card {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
+@media (max-width: 429px) {
+  .popular-card {
+    -ms-flex-preferred-size: 55%;
+        flex-basis: 55%;
+  }
 }
 
 /** services **/
