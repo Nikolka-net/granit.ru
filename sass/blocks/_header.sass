@@ -234,3 +234,1419 @@
         padding: 8px
 
     
+.header
+    display: flex
+    flex-direction: column
+    //background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //background-color: #a38a19
+    &_top
+        margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
+
+.logo
+    display: flex
+    //background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        //background: #a01b1b
+        margin-left: 10px
+       
+
+    &__link
+        align-self: baseline
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
+
+.header-phone
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        transform: translateY(4px)
+    &__button
+        display: flex
+        justify-content: center
+        padding: 12px 23px
+        font-family: $font_medium
+        font-size: 12px
+        cursor: pointer
+        margin-left: 30px
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
+        &:focus
+            outline: none
+        &:hover
+            box-shadow: 0 2px 8px #968f8f
+            transition-timing-function: linear
+            transition-duration: 0.4s
+
+.header-menu
+    background-color: #ffcc00
+    z-index: 99
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding: 8px 0 8px 0
+    //background-color: #aa3b8e
+
+    &__item
+        list-style: none
+
+    &__link
+        text-decoration: none
+        color: #000
+        &:hover
+            color: #ffffff
+            transition-timing-function: ease
+            transition-duration: 0.3s
+        &:focus
+            color: #fff
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -29px
+
+.hero
+    display: flex
+    flex-direction: column
+
+    &-content
+        color: #fff
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+            max-width: 250px
+            width: 100%
+
+    &-more
+        display: flex
+        align-items: center
+        &__button
+            max-width: 200px
+            height: 50px
+            width: 100%
+            background-color: #ffcc00
+
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+            &:hover
+                color: #ffcc00
+                transition-timing-function: ease
+                transition-duration: 0.3s
+        &_top
+            margin-top: 45px
+
+    &_top
+        margin-top: 130px
+
+
+@media ( max-width: 768px )
+    .header
+        &-logo
+            align-items: flex-start
+        &-phone
+            flex-direction: column
+            align-items: center
+    .phone
+        align-items: center
+        &_top
+            margin-top: 6px
+
+        &__button
+            margin: 15px 0 0 0
+
+@media ( max-width: 476px )
+    .menu-list
+        flex-direction: column
+        align-items: flex-start
+        &_padding
+            padding: 0
+
+        &__item
+            padding: 5px 0 0 0
+
+    .hero-content__title
+        font-size: 24px
+
+    .hero-more
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin: 24px 0 0 0
+
+    .phone
+        align-items: flex-start
+        &_top
+            margin-top: 0
+        &__button
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
+
+    .header
+        &-logo
+            flex-direction: column
+            &_bottom
+                transform: translateY(10px)
+
+        &-phone
+            flex-direction: row
+            &_top
+                margin-top: 15px
+        &-menu
+            &_top
+                margin-top: 15px
+
+@media ( max-width: 353px )
+    .phone__button
+        padding: 8px
+
+    
+.header
+    display: flex
+    flex-direction: column
+    //background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //background-color: #a38a19
+    &_top
+        margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
+
+.logo
+    display: flex
+    //background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        //background: #a01b1b
+        margin-left: 10px
+       
+
+    &__link
+        align-self: baseline
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
+
+.header-phone
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        transform: translateY(4px)
+    &__button
+        display: flex
+        justify-content: center
+        padding: 12px 23px
+        font-family: $font_medium
+        font-size: 12px
+        cursor: pointer
+        margin-left: 30px
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
+        &:focus
+            outline: none
+        &:hover
+            box-shadow: 0 2px 8px #968f8f
+            transition-timing-function: linear
+            transition-duration: 0.4s
+
+.header-menu
+    background-color: #ffcc00
+    z-index: 99
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding: 8px 0 8px 0
+    //background-color: #aa3b8e
+
+    &__item
+        list-style: none
+
+    &__link
+        text-decoration: none
+        color: #000
+        &:hover
+            color: #ffffff
+            transition-timing-function: ease
+            transition-duration: 0.3s
+        &:focus
+            color: #fff
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -29px
+
+.hero
+    display: flex
+    flex-direction: column
+
+    &-content
+        color: #fff
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+            max-width: 250px
+            width: 100%
+
+    &-more
+        display: flex
+        align-items: center
+        &__button
+            max-width: 200px
+            height: 50px
+            width: 100%
+            background-color: #ffcc00
+
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+            &:hover
+                color: #ffcc00
+                transition-timing-function: ease
+                transition-duration: 0.3s
+        &_top
+            margin-top: 45px
+
+    &_top
+        margin-top: 130px
+
+
+@media ( max-width: 768px )
+    .header
+        &-logo
+            align-items: flex-start
+        &-phone
+            flex-direction: column
+            align-items: center
+    .phone
+        align-items: center
+        &_top
+            margin-top: 6px
+
+        &__button
+            margin: 15px 0 0 0
+
+@media ( max-width: 476px )
+    .menu-list
+        flex-direction: column
+        align-items: flex-start
+        &_padding
+            padding: 0
+
+        &__item
+            padding: 5px 0 0 0
+
+    .hero-content__title
+        font-size: 24px
+
+    .hero-more
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin: 24px 0 0 0
+
+    .phone
+        align-items: flex-start
+        &_top
+            margin-top: 0
+        &__button
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
+
+    .header
+        &-logo
+            flex-direction: column
+            &_bottom
+                transform: translateY(10px)
+
+				&-phone
+            flex-direction: row
+            &_top
+                margin-top: 15px
+        &-menu
+            &_top
+                margin-top: 15px
+
+@media ( max-width: 353px )
+    .phone__button
+        padding: 8px
+
+    
+.header
+    display: flex
+    flex-direction: column
+    //background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //background-color: #a38a19
+    &_top
+        margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
+
+.logo
+    display: flex
+    //background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        //background: #a01b1b
+        margin-left: 10px
+       
+
+    &__link
+        align-self: baseline
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
+
+.header-phone
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        transform: translateY(4px)
+    &__button
+        display: flex
+        justify-content: center
+        padding: 12px 23px
+        font-family: $font_medium
+        font-size: 12px
+        cursor: pointer
+        margin-left: 30px
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
+        &:focus
+            outline: none
+        &:hover
+            box-shadow: 0 2px 8px #968f8f
+            transition-timing-function: linear
+            transition-duration: 0.4s
+
+.header-menu
+    background-color: #ffcc00
+    z-index: 99
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding: 8px 0 8px 0
+    //background-color: #aa3b8e
+
+    &__item
+        list-style: none
+
+    &__link
+        text-decoration: none
+        color: #000
+        &:hover
+            color: #ffffff
+            transition-timing-function: ease
+            transition-duration: 0.3s
+        &:focus
+            color: #fff
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -29px
+
+.hero
+    display: flex
+    flex-direction: column
+
+    &-content
+        color: #fff
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+            max-width: 250px
+            width: 100%
+
+    &-more
+        display: flex
+        align-items: center
+        &__button
+            max-width: 200px
+            height: 50px
+            width: 100%
+            background-color: #ffcc00
+
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+            &:hover
+                color: #ffcc00
+                transition-timing-function: ease
+                transition-duration: 0.3s
+        &_top
+            margin-top: 45px
+
+    &_top
+        margin-top: 130px
+
+
+@media ( max-width: 768px )
+    .header
+        &-logo
+            align-items: flex-start
+        &-phone
+            flex-direction: column
+            align-items: center
+    .phone
+        align-items: center
+        &_top
+            margin-top: 6px
+
+        &__button
+            margin: 15px 0 0 0
+
+@media ( max-width: 476px )
+    .menu-list
+        flex-direction: column
+        align-items: flex-start
+        &_padding
+            padding: 0
+
+        &__item
+            padding: 5px 0 0 0
+
+    .hero-content__title
+        font-size: 24px
+
+    .hero-more
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin: 24px 0 0 0
+
+    .phone
+        align-items: flex-start
+        &_top
+            margin-top: 0
+        &__button
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
+
+    .header
+        &-logo
+            flex-direction: column
+            &_bottom
+                transform: translateY(10px)
+
+        &-phone
+            flex-direction: row
+            &_top
+                margin-top: 15px
+        &-menu
+            &_top
+                margin-top: 15px
+
+@media ( max-width: 353px )
+    .phone__button
+        padding: 8px
+
+    
+.header
+    display: flex
+    flex-direction: column
+    //background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //background-color: #a38a19
+    &_top
+        margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
+
+.logo
+    display: flex
+    //background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        //background: #a01b1b
+        margin-left: 10px
+       
+
+    &__link
+        align-self: baseline
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
+
+.header-phone
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        transform: translateY(4px)
+    &__button
+        display: flex
+        justify-content: center
+        padding: 12px 23px
+        font-family: $font_medium
+        font-size: 12px
+        cursor: pointer
+        margin-left: 30px
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
+        &:focus
+            outline: none
+        &:hover
+            box-shadow: 0 2px 8px #968f8f
+            transition-timing-function: linear
+            transition-duration: 0.4s
+
+.header-menu
+    background-color: #ffcc00
+    z-index: 99
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding: 8px 0 8px 0
+    //background-color: #aa3b8e
+
+    &__item
+        list-style: none
+
+    &__link
+        text-decoration: none
+        color: #000
+        &:hover
+            color: #ffffff
+            transition-timing-function: ease
+            transition-duration: 0.3s
+        &:focus
+            color: #fff
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -29px
+
+.hero
+    display: flex
+    flex-direction: column
+
+    &-content
+        color: #fff
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+            max-width: 250px
+            width: 100%
+
+    &-more
+        display: flex
+        align-items: center
+        &__button
+            max-width: 200px
+            height: 50px
+            width: 100%
+            background-color: #ffcc00
+
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+            &:hover
+                color: #ffcc00
+                transition-timing-function: ease
+                transition-duration: 0.3s
+        &_top
+            margin-top: 45px
+
+    &_top
+        margin-top: 130px
+
+
+@media ( max-width: 768px )
+    .header
+        &-logo
+            align-items: flex-start
+        &-phone
+            flex-direction: column
+            align-items: center
+    .phone
+        align-items: center
+        &_top
+            margin-top: 6px
+
+        &__button
+            margin: 15px 0 0 0
+
+@media ( max-width: 476px )
+    .menu-list
+        flex-direction: column
+        align-items: flex-start
+        &_padding
+            padding: 0
+
+        &__item
+            padding: 5px 0 0 0
+
+    .hero-content__title
+        font-size: 24px
+
+    .hero-more
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin: 24px 0 0 0
+
+    .phone
+        align-items: flex-start
+        &_top
+            margin-top: 0
+        &__button
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
+
+    .header
+        &-logo
+            flex-direction: column
+            &_bottom
+                transform: translateY(10px)
+
+        &-phone
+            flex-direction: row
+            &_top
+                margin-top: 15px
+        &-menu
+            &_top
+                margin-top: 15px
+
+@media ( max-width: 353px )
+    .phone__button
+        padding: 8px
+
+    
+.header
+    display: flex
+    flex-direction: column
+    //background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //background-color: #a38a19
+    &_top
+        margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
+
+.logo
+    display: flex
+    //background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        //background: #a01b1b
+        margin-left: 10px
+       
+
+    &__link
+        align-self: baseline
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
+
+.header-phone
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        transform: translateY(4px)
+    &__button
+        display: flex
+        justify-content: center
+        padding: 12px 23px
+        font-family: $font_medium
+        font-size: 12px
+        cursor: pointer
+        margin-left: 30px
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
+        &:focus
+            outline: none
+        &:hover
+            box-shadow: 0 2px 8px #968f8f
+            transition-timing-function: linear
+            transition-duration: 0.4s
+
+.header-menu
+    background-color: #ffcc00
+    z-index: 99
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding: 8px 0 8px 0
+    //background-color: #aa3b8e
+
+    &__item
+        list-style: none
+
+    &__link
+        text-decoration: none
+        color: #000
+        &:hover
+            color: #ffffff
+            transition-timing-function: ease
+            transition-duration: 0.3s
+        &:focus
+            color: #fff
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -29px
+
+.hero
+    display: flex
+    flex-direction: column
+
+    &-content
+        color: #fff
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+            max-width: 250px
+            width: 100%
+
+    &-more
+        display: flex
+        align-items: center
+        &__button
+            max-width: 200px
+            height: 50px
+            width: 100%
+            background-color: #ffcc00
+
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+            &:hover
+                color: #ffcc00
+                transition-timing-function: ease
+                transition-duration: 0.3s
+        &_top
+            margin-top: 45px
+
+    &_top
+        margin-top: 130px
+
+
+@media ( max-width: 768px )
+    .header
+        &-logo
+            align-items: flex-start
+        &-phone
+            flex-direction: column
+            align-items: center
+    .phone
+        align-items: center
+        &_top
+            margin-top: 6px
+
+        &__button
+            margin: 15px 0 0 0
+
+@media ( max-width: 476px )
+    .menu-list
+        flex-direction: column
+        align-items: flex-start
+        &_padding
+            padding: 0
+
+        &__item
+            padding: 5px 0 0 0
+
+    .hero-content__title
+        font-size: 24px
+
+    .hero-more
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin: 24px 0 0 0
+
+    .phone
+        align-items: flex-start
+        &_top
+            margin-top: 0
+        &__button
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
+
+    .header
+        &-logo
+            flex-direction: column
+            &_bottom
+                transform: translateY(10px)
+
+        &-phone
+            flex-direction: row
+            &_top
+                margin-top: 15px
+        &-menu
+            &_top
+                margin-top: 15px
+
+@media ( max-width: 353px )
+    .phone__button
+        padding: 8px
+
+    
+.header
+    display: flex
+    flex-direction: column
+    //background-color: #e9d3d3
+
+.header-logo
+    display: flex
+    justify-content: space-between
+    //background-color: #a38a19
+    &_top
+        margin-top: 15px
+    &_bottom
+        transform: translateY(50px)    
+
+.logo
+    display: flex
+    //background-color: #43ac29
+    &-content
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        //background: #a01b1b
+        margin-left: 10px
+       
+
+    &__link
+        align-self: baseline
+
+    &__title
+        margin: 0
+        font-family: $font_bold
+        font-size: 20px
+        text-transform: uppercase
+        transform: translateY(3px)
+        &_colorblack
+            color: $color-black
+
+
+    &__text
+        font-family: $font_light
+        font-size: 11px
+        transform: translateY(7px)
+        &_colorgray
+            color: $color-gray
+
+
+.header-phone
+    display: flex
+    align-items: center
+
+.phone
+    display: flex
+    align-items: flex-end
+    flex-direction: column
+    &__link
+        font-family: $font_bold
+        font-size: 18px
+        text-decoration: none
+    &__text
+        font-family: $font_pro
+        font-size: 11px
+        transform: translateY(4px)
+    &__button
+        display: flex
+        justify-content: center
+        padding: 12px 23px
+        font-family: $font_medium
+        font-size: 12px
+        cursor: pointer
+        margin-left: 30px
+        &_showheader
+            border: 2px solid $color-black
+            background-color: #fff
+            color: #0d0d0d
+        &_showfooter
+            border: 2px solid #fff
+            background-color: $color-black
+            color: #fff 
+            margin-top: 30px  
+
+        &:focus
+            outline: none
+        &:hover
+            box-shadow: 0 2px 8px #968f8f
+            transition-timing-function: linear
+            transition-duration: 0.4s
+
+.header-menu
+    background-color: #ffcc00
+    z-index: 99
+    &_top
+        margin-top: 30px
+
+.menu-list
+    display: flex
+    align-items: center
+    justify-content: space-around
+    font-family: $font_medium
+    font-size: 14px
+    color: #000
+    padding: 8px 0 8px 0
+    //background-color: #aa3b8e
+
+    &__item
+        list-style: none
+
+    &__link
+        text-decoration: none
+        color: #000
+        &:hover
+            color: #ffffff
+            transition-timing-function: ease
+            transition-duration: 0.3s
+        &:focus
+            color: #fff
+
+.header-background
+    display: block
+    width: 100%
+    min-height: 550px
+    background: transparent url('../images/header-background/excavator.png') no-repeat center / cover
+    &_top
+        margin-top: -29px
+
+.hero
+    display: flex
+    flex-direction: column
+
+    &-content
+        color: #fff
+        &__title
+            font-family: $font-bold
+            font-size: 36px
+            text-transform: uppercase
+        &__text
+            font-family: $font-light
+            font-size: 14px
+            margin-top: 32px
+            line-height: 22px
+            max-width: 250px
+            width: 100%
+
+    &-more
+        display: flex
+        align-items: center
+        &__button
+            max-width: 200px
+            height: 50px
+            width: 100%
+            background-color: #ffcc00
+
+        &__text
+            color: #fff
+            font-size: 12px
+            font-family: $font_light
+            margin-left: 30px
+
+        &__link
+            color: #fff
+            font-family: $font_medium
+            margin-left: 10px
+            &:hover
+                color: #ffcc00
+                transition-timing-function: ease
+                transition-duration: 0.3s
+        &_top
+            margin-top: 45px
+
+    &_top
+        margin-top: 130px
+
+
+@media ( max-width: 768px )
+    .header
+        &-logo
+            align-items: flex-start
+        &-phone
+            flex-direction: column
+            align-items: center
+    .phone
+        align-items: center
+        &_top
+            margin-top: 6px
+
+        &__button
+            margin: 15px 0 0 0
+
+@media ( max-width: 476px )
+    .menu-list
+        flex-direction: column
+        align-items: flex-start
+        &_padding
+            padding: 0
+
+        &__item
+            padding: 5px 0 0 0
+
+    .hero-content__title
+        font-size: 24px
+
+    .hero-more
+        flex-direction: column
+        align-items: flex-start
+        &__text
+            margin: 24px 0 0 0
+
+    .phone
+        align-items: flex-start
+        &_top
+            margin-top: 0
+        &__button
+            &_showheader
+                margin: 0 0 0 12px
+            &_showfooter
+                margin-top: 0
+                transform: translateY(15px)
+
+    .header
+        &-logo
+            flex-direction: column
+            &_bottom
+                transform: translateY(10px)
+
+        &-phone
+            flex-direction: row
+            &_top
+                margin-top: 15px
+        &-menu
+            &_top
+                margin-top: 15px
+
+@media ( max-width: 353px )
+    .phone__button
+        padding: 8px
+
+    
