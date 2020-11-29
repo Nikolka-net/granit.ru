@@ -397,13 +397,18 @@ template {
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
+html,
 body {
   background: #ffffff;
   font-size: 16px;
   font-family: Gotham Pro;
   margin: 0;
+  height: 100%;
 }
 
 img {
@@ -430,6 +435,12 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: 0.3s;
+       -o-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .button_style:focus {
@@ -438,12 +449,20 @@ img {
 
 .button_style:hover {
   opacity: 0.8;
-  -webkit-transition-timing-function: ease;
-       -o-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+}
+
+/* правила ТОЛЬКО для Edge */
+@supports (-ms-ime-align: auto) {
+  main {
+    border: 5px solid brown;
+  }
+}
+
+/* правила ТОЛЬКО для Internet Explorer 10 и 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  main {
+    border: 1px solid red;
+  }
 }
 
 /** header **/
@@ -722,6 +741,10 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  transition-timing-function-transition-duration: 0.3s;
 }
 
 .hero-more__button {
@@ -746,12 +769,6 @@ img {
 
 .hero-more__link:hover {
   color: #ffcc00;
-  -webkit-transition-timing-function: ease;
-       -o-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-duration: 0.3s;
-       -o-transition-duration: 0.3s;
-          transition-duration: 0.3s;
 }
 
 .hero-more_top {
@@ -4107,11 +4124,12 @@ img {
 /** buttonUp **/
 /* Кнопка наверх */
 .scrollToTopBtn {
+  display: block;
   width: 58px;
   height: 58px;
   position: fixed;
   bottom: 7%;
-  right: 3%;
+  right: 30px;
   text-decoration: none;
   -webkit-transform: translateY(100px);
       -ms-transform: translateY(100px);
@@ -4185,6 +4203,162 @@ img {
   }
   .footer .phonefooter_top {
     margin-top: 15px;
+  }
+}
+
+/** popup **/
+/* Popup */
+body.lock {
+  overflow: hidden;
+}
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  /* для прокручивания внутри окна */
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  z-index: 100;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+
+.popup__body {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 10px;
+}
+
+.popup__content-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+  padding: 45px 60px 60px 60px;
+  background-color: #fff;
+  opacity: 0;
+  -webkit-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__content-block {
+  max-width: 360px;
+  width: 100%;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
+          align-self: center;
+}
+
+.popup__close {
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+
+.popup__title {
+  font-size: 16px;
+  margin: 0 0 32px 0;
+  font-family: Gotham Pro Bold;
+  color: #222;
+}
+
+.form__field {
+  max-width: 360px;
+  width: 100%;
+  font-family: Gotham Pro Light;
+  padding: 10px 0 10px 20px;
+  border: 1px solid #AAA3A2;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+textarea {
+  resize: none;
+  max-height: 70px;
+  height: 100%;
+}
+
+.popup__button {
+  display: block;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+}
+
+@media (max-width: 768px) {
+  .popup__content {
+    padding: 20px 15px 30px 15px;
+  }
+  .popup__title {
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .popup__button {
+    width: 100%;
   }
 }
 

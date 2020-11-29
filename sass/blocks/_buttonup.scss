@@ -1,11 +1,12 @@
 /* Кнопка наверх */
 
 .scrollToTopBtn {
+	display: block;
 	width: 58px;
 	height: 58px;
 	position: fixed;
 	bottom: 7%;
-	right: 3%;
+	right: 30px;
 	text-decoration: none;
 	transform: translateY(100px);
 	transition: all 0.5s ease-in;
