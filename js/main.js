@@ -165,7 +165,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	/* При клике на отправить возвр. required, добавл. обводку */
 	popupBtn.addEventListener('click', function (e) {
 		for (let i = 0; i < formField.length; i++) {
-			formField[i].setAttribute('required', '');
+			if (!formField[i].hasAttribute('required')) { // если аттрибута нет
+				formField[i].setAttribute('required', '');
+			}
 		}
 	});
 
@@ -181,7 +183,9 @@ document.addEventListener('DOMContentLoaded', function () {
 				}
 			}
 			for (let i = 0; i < formField.length; i++) {
-				formField[i].removeAttribute('required'); // убираем обводку, очищаем
+				if (formField[i].hasAttribute('required')) {
+					formField[i].removeAttribute('required'); // убираем обводку, очищаем
+				}
 				formField[i].value = ''; // очищаем инпуты
 			}
 			body.style.paddingRight = '0px'; // присваиваем body padding-right: 0
