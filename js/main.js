@@ -144,19 +144,16 @@ document.addEventListener('DOMContentLoaded', function () {
 	/* Блокируем скролл  */
 	function bodyLock() {
 		//ширина скролла = разница шир. вьюпорта - шир. объекта внутри него
-		// const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
 		const lockPaddingValue = window.innerWidth - body.offsetWidth + 'px';
 
 		if (lockPadding.length > 0) { // если объекты есть
 			for (let i = 0; i < lockPadding.length; i++) { // кажд. эл. с фикс. позицией(см. начало) задаём отступ
 				const el = lockPadding[i];
-				// el.style.paddingRight = lockPaddingValue; // отступ = шир. скролла
 				el.style.display = 'none'; // убираем кнопку наверх
 			}
 		}
 		body.style.paddingRight = lockPaddingValue; // присваиваем body padding-right: шир. скролла, чтобы не сдвиг. контент и не было 2-го скролла
 		body.classList.add('lock'); // убираем скролл в большинстве браузеров
-		// scrollToTopBtn.style.opacity = '0'; // убираем кнопу наверх
 
 		unlock = false; // можем открыть наш popup снова только через 800ms, иначе если сразу true, то появл. скролл
 		setTimeout(function () {
@@ -172,7 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			if (lockPadding.length > 0) {
 				for (let i = 0; i < lockPadding.length; i++) {
 					const el = lockPadding[i];
-					// el.style.paddingRight = '0px'; // убираем отступ = шир. скролла
 					el.style.display = 'block'; // показываем кнопку наверх
 				}
 			}

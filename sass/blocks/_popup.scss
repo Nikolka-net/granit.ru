@@ -79,7 +79,6 @@ body.lock {
 
 
 .form__field {
-	max-width: 360px;
 	width: 100%;
 	font-family: $font_light;
 	padding: 10px 0 10px 20px;
@@ -106,12 +105,13 @@ textarea {
 
 @media (max-width: 768px) {
 	.popup__content {
-		padding: 20px 15px 30px 15px;
+		padding: 30px 15px 30px 15px;
 	}
 
 	.popup__title {
 		margin: 0 0 20px 0;
 	}
+
 }
 @media (max-width: 420px) {
 	.popup__button {
