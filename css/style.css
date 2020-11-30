@@ -452,19 +452,7 @@ img {
 }
 
 /* правила ТОЛЬКО для Edge */
-@supports (-ms-ime-align: auto) {
-  main {
-    border: 5px solid brown;
-  }
-}
-
 /* правила ТОЛЬКО для Internet Explorer 10 и 11 */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  main {
-    border: 1px solid red;
-  }
-}
-
 /** header **/
 .header {
   display: -webkit-box;
@@ -4329,6 +4317,7 @@ body.lock {
   border: 1px solid #AAA3A2;
   margin-bottom: 20px;
   color: #222;
+  background-color: #fff;
 }
 
 textarea {

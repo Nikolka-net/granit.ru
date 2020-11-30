@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const popupLinks = document.querySelectorAll('.popup-link');
 	const body = document.querySelector('body');
 	const lockPadding = document.querySelectorAll('.lock-padding'); // для эл. с фиксир. позицией(fixed); чтобы при появлении окна контент не сдвиг-я, ему, как и body, задаём padding-right: шир. скролла
+	const formField = document.querySelectorAll('.form__field'); // инпуты, чтобы убрать обводку и очистить
+	const popupBtn = document.querySelector('.popup__button'); // кнопка отправить
 
 	let unlock = true; // чтобы не было двойных нажатий и 2-х скроллов
 
@@ -78,7 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			const popupLink = popupLinks[i];
 			popupLink.addEventListener('click', function (e) {
 				const popupName = popupLink.dataset.id; // получаю id = id окна
-				// const popupName = popupLink.getAttribute('href').replace('#', ''); // получаю чистое имя без #(id)
 				const curentPopup = document.getElementById(popupName); // получаю эл. по id
 				popupOpen(curentPopup); // открытие  popup
 				e.preventDefault(); // запрет перезагрузки стр. т.к. это ссылка
@@ -161,6 +162,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		}, timeout);
 	}
 
+	/* При клике на отправить возвр. required, добавл. обводку */
+	popupBtn.addEventListener('click', function (e) {
+		for (let i = 0; i < formField.length; i++) {
+			formField[i].setAttribute('required', '');
+		}
+	});
+
 	/* Разблокировка скролла */
 	function bodyUnlock() {
 
@@ -171,6 +179,10 @@ document.addEventListener('DOMContentLoaded', function () {
 					const el = lockPadding[i];
 					el.style.display = 'block'; // показываем кнопку наверх
 				}
+			}
+			for (let i = 0; i < formField.length; i++) {
+				formField[i].removeAttribute('required'); // убираем обводку, очищаем
+				formField[i].value = ''; // очищаем инпуты
 			}
 			body.style.paddingRight = '0px'; // присваиваем body padding-right: 0
 			body.classList.remove('lock');

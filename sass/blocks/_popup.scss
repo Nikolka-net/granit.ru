@@ -77,7 +77,6 @@ body.lock {
 	color: #222;
 }
 
-
 .form__field {
 	width: 100%;
 	font-family: $font_light;
@@ -85,7 +84,9 @@ body.lock {
 	border: 1px solid #AAA3A2;
 	margin-bottom: 20px;
 	color: #222;
+	background-color: #fff;
 }
+
 
 textarea {
 	resize: none;
@@ -113,6 +114,7 @@ textarea {
 	}
 
 }
+
 @media (max-width: 420px) {
 	.popup__button {
 		width: 100%;
