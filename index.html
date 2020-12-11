@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="description" content="Продажа нерудных материалов: песок, щебень, грунт и др.">
 	<title>Granit</title>
+	<link rel="stylesheet" href="./css/swiper-bundle.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -142,48 +143,56 @@
 		<div class="popular">
 			<div class="container">
 				<h2 class="container__title">Популярные товары</h2>
-				<div class="popular-cards">
-					<div class="popular-card popular-card__margin">
-						<div class="popular-card-wrap">
-							<img src="./images/popular/product1.png" alt="щебень" class="popular-card__img">
-							<p class="popular-card__stock">Акция</p>
-							<h4 class="popular-card__title">Гранитный щебень 5-20 мм</h4>
-							<strong class="popular-card__text">
-								<span class="popular-card__span">1500 р./т</span>
-								<span class="popular-card__text popular-card__text_red">1350 р./т</span>
-							</strong>
-							<button class="popular-card__button button_style">Купить</button>
-						</div>
+				<div class="popular-cards swiper-container">
+					<div class="swiper-wrapper">
+							<div class="popular-card popular-card__margin swiper-slide">
+								<div class="popular-card-wrap">
+									<img src="./images/popular/product1.png" alt="щебень" class="popular-card__img">
+									<p class="popular-card__stock">Акция</p>
+									<h4 class="popular-card__title">Гранитный щебень 5-20&nbsp;мм</h4>
+									<strong class="popular-card__text">
+										<span class="popular-card__span">1500 р./т</span>
+										<span class="popular-card__text popular-card__text_red">1350 р./т</span>
+									</strong>
+									<button class="popular-card__button button_style">Купить</button>
+								</div>
+							</div>
+							<div class="popular-card popular-card__margin swiper-slide">
+								<div class="popular-card-wrap">
+									<img src="./images/popular/product2.png" alt="щебень" class="popular-card__img">
+									<p class="popular-card__stock">Акция</p>
+									<h4 class="popular-card__title">Гранитный щебень 5-20&nbsp;мм</h4>
+									<strong class="popular-card__text">
+										<span class="popular-card__span">1500 р./т</span>
+										<span class="popular-card__text popular-card__text_red">1350 р./т</span>
+									</strong>
+									<button class="popular-card__button button_style">Купить</button>
+								</div>
+							</div>
+							<div class="popular-card popular-card__margin swiper-slide">
+								<div class="popular-card-wrap">
+									<img src="./images/popular/product3.png" alt="щебень" class="popular-card__img">
+									<h4 class="popular-card__title">Гранитный щебень 0-5&nbsp;мм (отсев)</h4>
+									<strong class="popular-card__text">1350 р./т</strong>
+									<button class="popular-card__button button_style">Купить</button>
+								</div>
+							</div>
+							<div class="popular-card popular-card__margin swiper-slide">
+								<div class="popular-card-wrap">
+									<img src="./images/popular/product4.png" alt="щебень" class="popular-card__img">
+									<h4 class="popular-card__title">Гранитный щебень 5-20&nbsp;мм</h4>
+									<strong class="popular-card__text">1350 р./т</strong>
+									<button class="popular-card__button button_style">Купить</button>
+								</div>
+							</div>
 					</div>
-					<div class="popular-card popular-card__margin">
-						<div class="popular-card-wrap">
-							<img src="./images/popular/product2.png" alt="щебень" class="popular-card__img">
-							<p class="popular-card__stock">Акция</p>
-							<h4 class="popular-card__title">Гранитный щебень 5-20 мм</h4>
-							<strong class="popular-card__text">
-								<span class="popular-card__span">1500 р./т</span>
-								<span class="popular-card__text popular-card__text_red">1350 р./т</span>
-							</strong>
-							<button class="popular-card__button button_style">Купить</button>
-						</div>
-					</div>
-					<div class="popular-card popular-card__margin">
-						<div class="popular-card-wrap">
-							<img src="./images/popular/product3.png" alt="щебень" class="popular-card__img">
-							<h4 class="popular-card__title">Гранитный щебень 0-5 мм (отсев)</h4>
-							<strong class="popular-card__text">1350 р./т</strong>
-							<button class="popular-card__button button_style">Купить</button>
-						</div>
-					</div>
-					<div class="popular-card popular-card__margin">
-						<div class="popular-card-wrap">
-							<img src="./images/popular/product4.png" alt="щебень" class="popular-card__img">
-							<h4 class="popular-card__title">Гранитный щебень 5-20 мм</h4>
-							<strong class="popular-card__text">1350 р./т</strong>
-							<button class="popular-card__button button_style">Купить</button>
-						</div>
-					</div>
+
+					<!-- Добавляем стрелки управления -->
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-button-next"></div>
 				</div>
+				<!-- end swiper-container -->
+
 			</div>
 		</div>
 		<!-- services -->
@@ -271,7 +280,7 @@
 
 		<div class="popup__body">
 			<div class="popup__content">
-		<div class="popup__content-block">
+				<div class="popup__content-block">
 					<div class="popup__content-header">
 						<h2 class="popup__title">Обратный звонок</h2>
 						<a href="#!" class="popup__close close-popup">
@@ -285,14 +294,14 @@
 							class="form__field textarea" maxlength="120"></textarea>
 						<button type="submit" class="popup__button button_style">отправить</button>
 					</form>
-		</div>
+				</div>
 			</div>
 		</div>
 
 	</div>
 
 	<!-- end popup -->
-
+	<script src="./js/swiper-bundle.js"></script>
 	<script src="./js/polifill.js"></script>
 	<script src="./js/main.js"></script>
 </body>

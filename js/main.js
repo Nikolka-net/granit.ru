@@ -4,6 +4,7 @@
 // Прослушиватель на всю страницу
 document.addEventListener('DOMContentLoaded', function () {
 
+
 	/* Плавная прокрутка, в том числе по кнопке наверх*/
 
 	const links = document.querySelectorAll('[data-scroll]'); // получ. коллекцию ссылок
@@ -241,5 +242,93 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	/* //popup */
+
+	/* Слайдер Swiper для товаров */
+
+	let mySliderPopular = new Swiper('.popular-cards', {
+		// Стрелки
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		},
+
+
+		// Включение/отключение
+		// перетаскивания слайдов на пк
+		simulateTouch: true,
+		// Чувствительность свайпа
+		touchRatio: 1,
+		// Угол срабатывания свайпа/перетаскивания
+		touchAngle: 45,
+		// Курсор перетаскивания
+		grabCursor: true,
+
+		// Переключение при клике на слайд
+		slideToClickedSlide: true,
+
+		// Управление клавиатурой
+		keyboard: {
+			// Включить/выключить
+			enabled: true,
+			// Включить/выключить
+			// только когда слайдер
+			// в пределах вьюпорта
+			onlyInViewport: true,
+			// Включить/выключить
+			// управление клавишами
+			// pageUp, pageDown
+			pageUpDown: true,
+		},
+
+		// Автовысота, высота слайдера подстраи-я к высоте картинки
+		autoHeight: false,
+
+		// Коли-во слайдов для показа
+		slidesPerView: 3, // если "auto" - автомати-е коли-во слайдов, не работ., если 2 ряда и >
+
+		// Отключение функционала слайдера, выкл. его
+		// если слайдов меньше, чем нужно
+		watchOverflow: true,
+
+		// Отступ между слайдами в px
+		spaceBetween: 20,
+
+		// Коли-во пролистываемых слайдов
+		slidesPerGroup: 1,
+
+		// Активный слайд по центру
+		centeredSlides: false,
+
+		// Стартовый слайд
+		initialSlide: 0, // начало с 0
+
+		// Мультирядность - коли-во рядов в слайдере
+		slidesPerColumn: 1, // отключ. autoHight
+
+		// Бесконечный слайдер: должен быть 1 ряд, откл. скролл,
+		loop: true,
+
+		// Длы норм. работы loop коли-во дублирующих слайдов, если slidesPerView: 'auto' ~
+		loopedSlides: 3,
+
+		// Ширина экрана mobile first: больше, чем указанное значение
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			480: {
+				slidesPerView: 2,
+			},
+			992: {
+				slidesPerView: 3,
+			}
+		},
+
+		// effect: 'slide',
+
+	});
+
+
+	/*  //слайдер Swiper */
 
 });

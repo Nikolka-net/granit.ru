@@ -1,3 +1,5 @@
+/* правила ТОЛЬКО для Internet Explorer 10 и 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
 .popular
     background-color: #fff
     display: flex
@@ -6,6 +8,8 @@
         align-items: stretch
         justify-content: space-around
         flex-wrap: wrap
+
+				min-width: 0
     &-card
         flex-basis: 24%
         text-align: center
@@ -15,7 +19,7 @@
         align-items: center
         padding: 1px
         overflow: hidden
-      
+
         &__margin
             margin-bottom: 80px
         &__title

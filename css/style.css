@@ -3700,6 +3700,135 @@ img {
 }
 
 /** popular **/
+/* правила ТОЛЬКО для Internet Explorer 10 и 11 */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .popular {
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .popular-cards {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .popular-card {
+    max-width: 225px;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1px;
+    overflow: hidden;
+  }
+  .popular-card__margin {
+    margin-bottom: 80px;
+    margin-right: 10px;
+  }
+  .popular-card__title {
+    font-size: 13px;
+    color: #292929;
+    border-bottom: 1px solid #d7d7d7;
+    margin-top: 20px;
+  }
+  .popular-card__text {
+    font-family: Gotham Pro Medium;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  .popular-card_red {
+    color: #ff0000;
+  }
+  .popular-card__span {
+    font-size: 10px;
+    color: #979797;
+    text-decoration: line-through;
+    margin-right: 10px;
+  }
+  .popular-card__button {
+    max-width: 180px;
+    height: 50px;
+    margin-top: 25px;
+  }
+  .popular-card-wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 18px;
+  }
+  .popular-card__stock {
+    position: absolute;
+    top: 5%;
+    left: 14%;
+    max-width: 55px;
+    height: 25px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-family: Gotham Pro Medium;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (max-width: 771px), (-ms-high-contrast: active) and (max-width: 771px) {
+  .popular-card__margin {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media all and (-ms-high-contrast: none) and (max-width: 576px), (-ms-high-contrast: active) and (max-width: 576px) {
+  .popular-card {
+    margin: 10px 20px;
+  }
+}
+
 .popular {
   background-color: #fff;
   display: -webkit-box;
@@ -3709,28 +3838,11 @@ img {
 }
 
 .popular-cards {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  min-width: 0;
 }
 
 .popular-card {
-  -webkit-flex-basis: 24%;
-      -ms-flex-preferred-size: 24%;
-          flex-basis: 24%;
   text-align: center;
-  border: 2px solid #f6f6f6;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3743,7 +3855,6 @@ img {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1px;
   overflow: hidden;
 }
 
@@ -3751,37 +3862,8 @@ img {
   margin-bottom: 80px;
 }
 
-.popular-card__title {
-  font-size: 13px;
-  color: #292929;
-  border-bottom: 1px solid #d7d7d7;
-  margin-top: 20px;
-}
-
-.popular-card__text {
-  font-family: Gotham Pro Medium;
-  font-size: 16px;
-  margin-top: 8px;
-}
-
-.popular-card__text_red {
-  color: #ff0000;
-}
-
-.popular-card__span {
-  font-size: 10px;
-  color: #979797;
-  text-decoration: line-through;
-  margin-right: 10px;
-}
-
-.popular-card__button {
-  max-width: 180px;
-  height: 50px;
-  margin-top: 25px;
-}
-
 .popular-card-wrap {
+  border: 2px solid #f6f6f6;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -3801,8 +3883,8 @@ img {
 
 .popular-card__stock {
   position: absolute;
-  top: 5%;
-  left: 14%;
+  top: 7%;
+  left: 11%;
   max-width: 55px;
   height: 25px;
   width: 100%;
@@ -3825,38 +3907,53 @@ img {
   text-transform: uppercase;
 }
 
-@media (max-width: 771px) {
-  .popular-card__margin {
-    margin-bottom: 20px;
-    -webkit-flex-basis: 30%;
-        -ms-flex-preferred-size: 30%;
-            flex-basis: 30%;
-  }
+.popular-card__title {
+  font-size: 13px;
+  color: #292929;
+  border-bottom: 1px solid #d7d7d7;
+  margin-top: 20px;
+  max-width: 185px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 54%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: auto;
 }
 
-@media (max-width: 576px) {
-  .popular-card {
-    -webkit-flex-basis: 36%;
-        -ms-flex-preferred-size: 36%;
-            flex-basis: 36%;
-    margin: 10px 20px;
-  }
+.popular-card__text {
+  font-family: Gotham Pro Medium;
+  font-size: 16px;
+  margin-top: 55px;
 }
 
-@media (max-width: 476px) {
-  .popular-card {
-    -webkit-flex-basis: 40%;
-        -ms-flex-preferred-size: 40%;
-            flex-basis: 40%;
-  }
+.popular-card__span {
+  font-size: 10px;
+  color: #979797;
+  text-decoration: line-through;
+  margin-right: 10px;
 }
 
-@media (max-width: 429px) {
-  .popular-card {
-    -webkit-flex-basis: 55%;
-        -ms-flex-preferred-size: 55%;
-            flex-basis: 55%;
-  }
+.popular-card__text_red {
+  color: #ff0000;
+}
+
+.popular-card__button {
+  max-width: 180px;
+  height: 50px;
+  margin-top: 25px;
+}
+
+/* Стрелки: меняем их стили, они подклю-ны с по-ю font Awesome */
+.popular-cards .swiper-button-prev::after,
+.popular-cards .swiper-button-next::after {
+  color: #292929;
+  font-size: 38px;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 /** services **/

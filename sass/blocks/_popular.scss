@@ -1,0 +1,222 @@
+/* правила ТОЛЬКО для Internet Explorer 10 и 11 */
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+	.popular {
+		background-color: #fff;
+		display: flex;
+
+		&-cards {
+			display: flex;
+			align-items: stretch;
+			justify-content: space-around;
+			flex-wrap: wrap;
+		}
+
+		&-card {
+			max-width: 225px;
+			// flex-basis: 24%;
+			text-align: center;
+			// border: 2px solid #f6f6f6;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding: 1px;
+			overflow: hidden;
+
+			&__margin {
+				margin-bottom: 80px;
+				margin-right: 10px;
+			}
+
+			&__title {
+				font-size: 13px;
+				color: $color-black;
+				border-bottom: 1px solid #d7d7d7;
+				margin-top: 20px;
+			}
+
+			&__text {
+				font-family: $font_medium;
+				font-size: 16px;
+				margin-top: 8px;
+			}
+
+			&_red {
+				color: #ff0000;
+			}
+
+			&__span {
+				font-size: 10px;
+				color: #979797;
+				text-decoration: line-through;
+				margin-right: 10px;
+			}
+
+			&__button {
+				max-width: 180px;
+				height: 50px;
+				margin-top: 25px;
+			}
+
+			&-wrap {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				padding: 18px;
+			}
+
+			&__stock {
+				position: absolute;
+				top: 5%;
+				left: 14%;
+				max-width: 55px;
+				height: 25px;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #ff0000;
+				color: #ffffff;
+				font-family: $font_medium;
+				font-size: 10px;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	@media (max-width: 771px) {
+		.popular {
+			&-card {
+				&__margin {
+					margin-bottom: 20px;
+					// flex-basis: 30%;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 576px) {
+		.popular {
+			&-card {
+				// flex-basis: 36%;
+				margin: 10px 20px;
+			}
+		}
+	}
+
+	@media (max-width: 476px) {
+		.popular {
+			&-card {
+				// flex-basis: 40%;
+			}
+		}
+	}
+
+	@media (max-width: 429px) {
+		.popular {
+			&-card {
+				// flex-basis: 55%;
+			}
+		}
+	}
+
+}
+
+
+
+.popular {
+	background-color: #fff;
+	display: flex;
+}
+
+.popular-cards {
+	min-width: 0;
+}
+
+
+.popular-card {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.popular-card__margin {
+	margin-bottom: 80px;
+}
+
+
+.popular-card-wrap {
+	border: 2px solid #f6f6f6;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 18px;
+}
+
+
+.popular-card__stock {
+	position: absolute;
+	top: 7%;
+	left: 11%;
+	max-width: 55px;
+	height: 25px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ff0000;
+	color: #ffffff;
+	font-family: $font_medium;
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+.popular-card__title {
+	font-size: 13px;
+	color: $color-black;
+	border-bottom: 1px solid #d7d7d7;
+	margin-top: 20px;
+	max-width: 185px;
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 54%;
+	transform: translate(-50%, -50%);
+	overflow: auto;
+}
+
+.popular-card__text {
+	font-family: $font_medium;
+	font-size: 16px;
+	margin-top: 55px;
+}
+
+.popular-card__span {
+	font-size: 10px;
+	color: #979797;
+	text-decoration: line-through;
+	margin-right: 10px;
+}
+
+.popular-card__text_red {
+	color: #ff0000;
+}
+
+.popular-card__button {
+	max-width: 180px;
+	height: 50px;
+	margin-top: 25px;
+}
+
+/* Стрелки: меняем их стили, они подклю-ны с по-ю font Awesome */
+.popular-cards .swiper-button-prev::after,
+.popular-cards .swiper-button-next::after {
+	color: $color-black;
+	font-size: 38px;
+	transform: translateY(-100%);
+}
