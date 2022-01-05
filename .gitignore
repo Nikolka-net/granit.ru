@@ -37,5 +37,7 @@ settings.json
 .eslintrc.js
 .jshintrc
 old/*
+admin/*
+admin2/*
 
 # End of https://www.gitignore.io/api/windows

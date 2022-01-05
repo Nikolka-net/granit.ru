@@ -4272,14 +4272,20 @@ img {
           flex-direction: column;
 }
 
-.footer-phone-date {
-  font-family: Gotham Pro;
-  font-size: 12px;
+.footer-date {
   color: #fff;
+  font-size: 12px;
+  font-family: Gotham Pro;
 }
 
-.footer-phone-date_top {
-  margin-top: 40px;
+.footer-date_top {
+  margin-top: 25px;
+}
+
+@media (max-width: 476px) {
+  .footer-date_top {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 476px) {
